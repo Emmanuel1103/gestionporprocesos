@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/gestionporprocesos/",
+  base: mode === "development" ? "/" : "/gestionporprocesos/", // 👈 esto es la clave
   server: {
     host: "::",
     port: 8080,
